@@ -2,7 +2,7 @@
 import { CircularProgress, Container, Grid, ImageList, ImageListItem, ListItem, Paper, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux'
-import { getAlbums, setLoading } from '../../../redux/actions/albumsAction'
+import { setLoading } from '../../../redux/actions/albumsAction'
 import { styled } from '@mui/material/styles';
 import { Box } from '@mui/system';
 import { useRouter } from 'next/router'
@@ -56,5 +56,5 @@ const mapStateToProps = (state) => ({
   loading: state.albumReducer.loading,
 })
 
-export default connect(mapStateToProps, { getAlbums, setLoading })(Album);
+export default connect(mapStateToProps, { setLoading })(Album);
 
